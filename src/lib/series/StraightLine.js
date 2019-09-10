@@ -50,12 +50,16 @@ class StraightLine extends Component {
 
 		const lineCoordinates = getLineCoordinates(type, xScale, yScale, xValue, yValue, width, height);
 
+		let newStrokeWidth = strokeWidth;
+		if (newStrokeWidth > 1) {
+			newStrokeWidth = 2 * (yScale(yValue) - yScale(strokeWidth));
+		}
 		return (
 			<line
 				className={className}
 				strokeDasharray={getStrokeDasharray(strokeDasharray)}
 				stroke={stroke}
-				strokeWidth={strokeWidth}
+				strokeWidth={newStrokeWidth}
 				strokeOpacity={opacity}
 				{...lineCoordinates}
 			/>

@@ -79,6 +79,12 @@ export const SMA = {
 	windowSize: 10,
 };
 
+export const Momentum = {
+	// source: d => d.close, // "high", "low", "open", "close"
+	sourcePath: "close",
+	windowSize: 1,
+};
+
 export const WMA = {
 	// source: d => d.close, // "high", "low", "open", "close"
 	sourcePath: "close",

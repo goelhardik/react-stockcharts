@@ -1,6 +1,7 @@
 
 export { default as ema } from "./ema";
 export { default as sma } from "./sma";
+export { default as momentum } from "./momentum";
 export { default as wma } from "./wma";
 export { default as tma } from "./tma";
 export { default as bollingerBand } from "./bollingerBand";
